@@ -23,10 +23,10 @@ jobs:
         include-prerelease: true
 
     - name: Build with dotnet
-      run: dotnet build "Source\DeployTest\Server\AutoDeployTest.csproy" --configuration Release
+      run: dotnet build "Source\DeployTest\Server\DeployTest.csproy" --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish "Source\DeployTest\Server\AutoDeployTest.csproy" -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: dotnet publish "Source\DeployTest\Server\DeployTest.csproy" -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
